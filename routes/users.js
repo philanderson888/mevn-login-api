@@ -18,7 +18,7 @@ router.post('/register', async (req, res) => {
     password: hashedPassword
   })
   await user.save();
-  res.header("Access-Control-Allow-Origin", "https://flamboyant-banach-405870.netlify.app/")
+  res.header("Access-Control-Allow-Origin", "https://flamboyant-banach-405870.netlify.app")
   res.header("Access-Control-Allow-Headers","Origin,X-Requested-With, Content-Type, Accept")
   res.json(user).status(201);
 });
@@ -31,7 +31,7 @@ router.post('/login', async (req, res) => {
     const token = await jwt.sign({ name, _id }, SECRET);
     return res.json({ token });
   }
-  res.header("Access-Control-Allow-Origin", "https://flamboyant-banach-405870.netlify.app/")
+  res.header("Access-Control-Allow-Origin", "https://flamboyant-banach-405870.netlify.app")
   res.header("Access-Control-Allow-Headers","Origin,X-Requested-With, Content-Type, Accept")
   res.status(401);
 });
