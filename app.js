@@ -13,7 +13,10 @@ var app = express();
 
 console.log(`starting app and keeping it running with 'nodemon'`)
 
-app.use(cors())
+let options = {
+  origin: 'https://flamboyant-banach-405870.netlify.app'
+}
+app.use(cors(options))
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
