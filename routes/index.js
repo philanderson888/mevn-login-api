@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const url = "http://77.99.118.2"
-//const url = "https://flamboyant-banach-405870.netlify.app"
+//const url = "https://mevn-login-app.netlify.app"
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

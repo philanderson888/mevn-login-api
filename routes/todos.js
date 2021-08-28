@@ -4,7 +4,7 @@ const { Todo } = require("../db");
 const jwt = require("jsonwebtoken");
 const { SECRET } = require("../constants");
 const url = "http://77.99.118.2"
-//const url = "https://flamboyant-banach-405870.netlify.app"
+//const url = "https://mevn-login-app.netlify.app"
 
 const verifyToken = (req, res, next) => {
   try {

@@ -6,7 +6,7 @@ const { SECRET } = require('../constants');
 const jwt = require('jsonwebtoken');
 const saltRounds = 10;
 const url = "http://77.99.118.2"
-//const url = "https://flamboyant-banach-405870.netlify.app"
+//const url = "https://mevn-login-app.netlify.app"
 
 router.post('/register', async (req, res) => {
   const { name, password } = req.body;
