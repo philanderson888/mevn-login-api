@@ -15,6 +15,8 @@
   - [Securing the password](#securing-the-password)
   - [local environment variables](#local-environment-variables)
   - [deploy environment variables to netlify](#deploy-environment-variables-to-netlify)
+  - [Fauna alternative to Mongo](#fauna-alternative-to-mongo)
+  - [netlify running a build](#netlify-running-a-build)
 
 ## introduction
 
@@ -276,5 +278,17 @@ For example our `todos` database shows
 
 so now that we have deployed our environment variables locally, how do we now put those same variables into Netlify?
 
+We simply log in to `Netlify`, find our deployment and in the 
 
 
+## Fauna alternative to Mongo
+
+Note that Fauna has built-in compatibility with Netlify so makes it ideal for use as a database tool with Netlify.
+
+It has a generous free tier also
+
+https://docs.fauna.com/fauna/current/integrations/netlify.html
+
+## netlify running a build
+
+to deploy our site to `netlify` we should first create a separate github repository for our back end api such as in my example here https://github.com/philanderson888/mevn-login-api 
