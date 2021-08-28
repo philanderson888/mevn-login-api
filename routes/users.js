@@ -6,12 +6,7 @@ const { SECRET } = require('../constants');
 const jwt = require('jsonwebtoken');
 const saltRounds = 10;
 
-router.get('/register', async (req,res) => {
-  console.log('getting a get request on the register users page')
-})
-
 router.post('/register', async (req, res) => {
-  console.log('api back end attempting to register a new user')
   const { name, password } = req.body;
   const existingUser = await User.findOne({ name });
   if (existingUser) {
@@ -28,12 +23,10 @@ router.post('/register', async (req, res) => {
 
 router.post('/login', async (req, res) => {
   const { name, password } = req.body;
-  console.log(`POST on the LOGIN page for user ${name} with password ${[password]}`)
   const { _id, password: userPassword } = await User.findOne({ name });
   const match = await bcrypt.compare(password, userPassword);
   if (match) {
     const token = await jwt.sign({ name, _id }, SECRET);
-    console.log(`passwords match so new token created ${token}`)
     return res.json({ token });
   }
   res.status(401);
