@@ -5,6 +5,8 @@ const { User } = require('../db');
 const { SECRET } = require('../constants');
 const jwt = require('jsonwebtoken');
 const saltRounds = 10;
+const url = "http://77.99.118.2"
+//const url = "https://flamboyant-banach-405870.netlify.app"
 
 router.post('/register', async (req, res) => {
   const { name, password } = req.body;
@@ -18,7 +20,7 @@ router.post('/register', async (req, res) => {
     password: hashedPassword
   })
   await user.save();
-  res.header("Access-Control-Allow-Origin", "https://flamboyant-banach-405870.netlify.app")
+  res.header("Access-Control-Allow-Origin", url)
   res.header("Access-Control-Allow-Headers","Origin,X-Requested-With, Content-Type, Accept")
   res.json(user).status(201);
 });
@@ -31,7 +33,7 @@ router.post('/login', async (req, res) => {
     const token = await jwt.sign({ name, _id }, SECRET);
     return res.json({ token });
   }
-  res.header("Access-Control-Allow-Origin", "https://flamboyant-banach-405870.netlify.app")
+  res.header("Access-Control-Allow-Origin", url)
   res.header("Access-Control-Allow-Headers","Origin,X-Requested-With, Content-Type, Accept")
   res.status(401);
 });

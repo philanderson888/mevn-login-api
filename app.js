@@ -8,14 +8,17 @@ var cors = require('cors')
 var defaultrouter = require('./routes/index.js')
 var todorouter = require('./routes/todos.js');
 var usersRouter = require('./routes/users.js');
+const url = "http://77.99.118.2"
+//const url = "https://flamboyant-banach-405870.netlify.app"
 
 var app = express();
 
 console.log(`starting app and keeping it running with 'nodemon'`)
 
 let options = {
-  origin: 'https://flamboyant-banach-405870.netlify.app'
+  origin: url
 }
+
 app.use(cors(options))
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
