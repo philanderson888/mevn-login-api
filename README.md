@@ -10,7 +10,6 @@
   - [creating a `netlify.toml` file](#creating-a-netlifytoml-file)
   - [netlify functions - upgrade `nodejs` first](#netlify-functions---upgrade-nodejs-first)
   - [netlify functions (now with correct version of `nodejs`)](#netlify-functions-now-with-correct-version-of-nodejs)
-    - [video 2](#video-2)
   - [hosting mongodb on the cloud](#hosting-mongodb-on-the-cloud)
   - [Securing the password](#securing-the-password)
   - [local environment variables](#local-environment-variables)
@@ -178,11 +177,6 @@ limitations
 - stateless
 - latency
 
-### video 2
-
-https://explorers.netlify.com/learn/up-and-running-with-serverless-functions/project-setup-with-serverless-functions
-
-Go to https://github.com/netlify/explorers-up-and-running-with-serverless-functions/ and click `use this template` (make sure you are logged in to Github first!). 
 
 ## hosting mongodb on the cloud
 
